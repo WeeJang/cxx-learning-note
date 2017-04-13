@@ -174,6 +174,24 @@ struct expr_value : boost::variant<std::string,\
 boost::apply_visitor(callable,elem)
 ```
 
+这里有个小坑要注意，callable的override operator() 必须为const
+
+```c++
+class ASTVisitor{
+  typedef void return_type;
+  void operator()(const expr& ...) const {}
+};
+```
+
+
+
+Spirit X3也对Variant包装了一下，在/boost/spirit/home/x3/support/ast/variant.hpp，因此
+
+```c++
+struct expr_value : public x3::variant<std::string,\
+  					x3::forward_ast<expr>> {...};
+```
+
 ### 5.Other
 
 1. rule 与 parser 的逻辑关系。多个primitive parser / rule  -> rule。rule 也是parser 的derived class. 

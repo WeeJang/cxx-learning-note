@@ -1,25 +1,19 @@
-#include<boost/variant.hpp>
-#include<string>
-#include<map>
+#include <boost/variant.hpp>
+#include <map>
+#include <string>
 
-namespace test{
+namespace test {
 
 struct expr;
-struct expr_value : boost::variant<std::string,\
-		expr*>{
+struct expr_value : boost::variant<std::string, expr *> {};
 
+struct expr {
+  std::map<std::string, expr_value> expr_map;
 };
 
-struct expr{
-	std::map<std::string,expr_value> expr_map;
-};
+} // namespace test
 
-
-}
-
-
-
-int main(){
-	test::expr ex;
-	return 0;	
+int main() {
+  test::expr ex;
+  return 0;
 }
