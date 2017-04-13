@@ -40,7 +40,7 @@ class parser<Derived>{
 
 ### 2.Context
 
-​     Context 在不同上下文（调用栈）中起到共享数据的左右，抽象上看是一个链表结构，而且是ploymorphism的。同时秉承原则：Caller setup context, Callee retrieve the context as needed。
+​     Context 在不同上下文（调用栈）中起到共享数据的作用，抽象上看是一个链表结构，而且是ploymorphism的。同时秉承原则：Caller setup context, Callee retrieve the context as needed。
 
 ```
 template<typename ID,typename T,typename NextConext>
@@ -168,9 +168,11 @@ struct expr_value : boost::variant<std::string,\
   					x3::forward_ast<expr>>{...};
 ```
 
- 
+当然，在访问时，需要使用Boost.Variant提供的接口
 
-
+```c++
+boost::apply_visitor(callable,elem)
+```
 
 ### 5.Other
 
