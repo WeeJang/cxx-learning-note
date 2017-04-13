@@ -10,7 +10,7 @@
 
 1. CRTP([Curiously Recurring Template Pattern](https://en.wikipedia.org/wiki/Curiously_recurring_template_pattern));
 2. ET([Expression Template](https://en.wikipedia.org/wiki/Expression_templates));
-3. ADL([Argument-dependent name lookup]([https://en.wikipedia.org/wiki/Argument-dependent_name_lookup](https://en.wikipedia.org/wiki/Argument-dependent_name_lookup)));
+3. ADL([Argument-dependent name lookup]([https://en.wikipedia.org/wiki/Argument-dependent_name_lookup));
 
 因此，理解Spirit 需要对以上TMP有所了解。虽然可能没发一时半会把源码琢磨的很透，但起码会有比较好的感觉。
 
@@ -281,6 +281,7 @@ bool parser_numbers(Iterator& first,Iterator end,std::vector<double>& v){
 
 ## Reference
 
-1. <<Inside Spirit X3>>,<<Using Spirit X3 to write Parser>>
-2. [http://boost-spirit.com/home/2015/05/16/spirit-3-0-0/](http://boost-spirit.com/home/2015/05/16/spirit-3-0-0/)
-3. [http://ciere.com/cppnow15/x3_docs/](http://ciere.com/cppnow15/x3_docs/)
+1. \<\<Inside Spirit X3\>\>
+2. \<\<Using Spirit X3 to write Parser\>\>
+3. [http://boost-spirit.com/home/2015/05/16/spirit-3-0-0/](http://boost-spirit.com/home/2015/05/16/spirit-3-0-0/)
+4. [http://ciere.com/cppnow15/x3_docs/](http://ciere.com/cppnow15/x3_docs/)
