@@ -10,7 +10,7 @@
 
 1. CRTP([Curiously Recurring Template Pattern](https://en.wikipedia.org/wiki/Curiously_recurring_template_pattern));
 2. ET([Expression Template](https://en.wikipedia.org/wiki/Expression_templates));
-3. ADL([Argument-dependent name lookup]([https://en.wikipedia.org/wiki/Argument-dependent_name_lookup));
+3. ADL([Argument-dependent name lookup](https://en.wikipedia.org/wiki/Argument-dependent_name_lookup));
 
 因此，理解Spirit 需要对以上TMP有所了解。虽然可能没发一时半会把源码琢磨的很透，但起码会有比较好的感觉。
 
